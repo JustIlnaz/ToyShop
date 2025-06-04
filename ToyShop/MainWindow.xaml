@@ -5,8 +5,27 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ToyShop"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
+        Title="ToyShop" Height="450" Width="800">
+    <Grid >
+        <Grid.RowDefinitions>
+            <RowDefinition Height="27*"/>
+            <RowDefinition Height="191*"/>
+        </Grid.RowDefinitions>
+        <!--Заливка-->
+        <Rectangle Fill="#FFB58C82" />
+        
+        <!--Лого-->
+        <StackPanel Orientation="Horizontal">
+            <Image Source="assets/logo.png" Margin="5" Height="40" VerticalAlignment="Center"/>
+            <TextBlock Text="Joy Toy" FontSize="20" VerticalAlignment="Center" Margin="5" Foreground="#f3f0da" />
+        </StackPanel>
+
+        
+        <!--Фрейм-->
+        <Frame x:Name="MainFrame" Grid.Row="1">
+            
+        </Frame>
+        
         
     </Grid>
 </Window>
