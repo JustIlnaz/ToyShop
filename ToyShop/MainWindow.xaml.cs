@@ -14,6 +14,7 @@
         using System.Windows.Shapes;
         using ToyShop.Pages;
 
+
         namespace ToyShop
         {
             /// <summary>
@@ -27,4 +28,6 @@
                     MainFrame.Navigate(new AuthorizationPage());
                 }
             }
-        }
+}
+
+

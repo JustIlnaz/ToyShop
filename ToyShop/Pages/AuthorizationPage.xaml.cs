@@ -1,23 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
+using ToyShop.Utils;
+using ToyShop.Models;
+using ToyShop.Pages;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
-
 namespace ToyShop.Pages
 {
-    /// <summary>
-    /// Логика взаимодействия для AuthorizationPage.xaml
-    /// </summary>
     public partial class AuthorizationPage : Page
     {
         public AuthorizationPage()
@@ -25,7 +14,27 @@ namespace ToyShop.Pages
             InitializeComponent();
         }
 
+        private void SignInBtn_Click(object sender, RoutedEventArgs e)
+        {
+            string login = loginTb.Text;
+            string password = passwordPb.Password;
 
+            List<User> users = ExcelReader.LoadUsersFromExcel("User.xlsx");
+            var user = users.FirstOrDefault(u => u.Login == login && u.Password == password);
+
+            if (user != null)
+            {
+                ((MainWindow)Application.Current.MainWindow).MainFrame.Navigate(new CatalogPage());
+            }
+            else
+            {
+                MessageBox.Show("Неверный логин или пароль");
+            }
+        }
+
+        private void SignUpBtn_Click(object sender, RoutedEventArgs e)
+        {
+            ((MainWindow)Application.Current.MainWindow).MainFrame.Navigate(new SignUpPage());
+        }
     }
 }
-    
