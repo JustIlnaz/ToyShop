@@ -7,16 +7,8 @@
         <Style TargetType="Button">
             <Setter Property="FontSize" Value="25"/>
             <Setter Property="Margin" Value="5"/>
-            <Setter Property="Foreground" Value="#f3f0da"/>
-            <Setter Property="Background" Value="#FFB58C82"/>
             <Setter Property="BorderThickness" Value="0"/>
-            <Setter Property="Template">
-                <Setter.Value>
-                    <ControlTemplate>
-                        <Border CornerRadius="5" Background="{TemplateBinding Background}"/>
-                    </ControlTemplate>
-                </Setter.Value>
-            </Setter>
+            <Setter Property="Background" Value="#FFB58C82"/>
         </Style>
 
         <!-- TextBox -->
@@ -29,7 +21,7 @@
         <!-- TextBlock -->
         <Style TargetType="TextBlock">
             <Setter Property="FontSize" Value="15"/>
-            <Setter Property="Foreground" Value="#FFB58C82"/>
+            <Setter Property="Foreground" Value="#f3f0da"/>
         </Style>
 
         <!-- PasswordBox -->
