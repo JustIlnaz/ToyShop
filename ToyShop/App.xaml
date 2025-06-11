@@ -21,7 +21,7 @@
         <!-- TextBlock -->
         <Style TargetType="TextBlock">
             <Setter Property="FontSize" Value="15"/>
-            <Setter Property="Foreground" Value="#f3f0da"/>
+            <Setter Property="Foreground" Value="BLACK"/>
         </Style>
 
         <!-- PasswordBox -->

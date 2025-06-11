@@ -1,7 +1,6 @@
 ﻿using System.Collections.Generic;
-using System.Windows;
-using ToyShop.Utils;
 using System.Windows.Controls;
+using ToyShop.Utils;
 
 namespace ToyShop.Pages
 {
@@ -10,10 +9,8 @@ namespace ToyShop.Pages
         public CatalogPage()
         {
             InitializeComponent();
-
             // Чтение из Excel
             var products = ExcelReader.LoadProductsFromExcel("Toy.xlsx");
-
             ProductsList.ItemsSource = products;
         }
     }

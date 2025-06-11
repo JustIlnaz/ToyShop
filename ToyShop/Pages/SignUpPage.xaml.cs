@@ -4,8 +4,8 @@ using System.Linq;
 using System.Windows;
 using ToyShop.Utils;
 using ToyShop.Models;
-namespace ToyShop.Pages
 
+namespace ToyShop.Pages
 {
     /// <summary>
     /// Логика взаимодействия для SignUpPage.xaml
@@ -32,7 +32,6 @@ namespace ToyShop.Pages
             }
 
             var users = ExcelReader.LoadUsersFromExcel("User.xlsx");
-
             if (users.Any(u => u.Login == login))
             {
                 MessageBox.Show("Пользователь с таким логином уже существует");
@@ -51,8 +50,6 @@ namespace ToyShop.Pages
 
             MessageBox.Show("Регистрация успешна!");
             NavigationService.GoBack();
-
-
         }
     }
 }
